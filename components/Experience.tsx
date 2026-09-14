@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 type RelatedProject = {
   name: string;
   description: string;
@@ -69,50 +73,69 @@ const experience: ExperienceItem[] = [
 ];
 
 export default function Experience() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <section id="experience" className="border-t border-black/[.08] py-16">
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
-        Experience
-      </h2>
-      <ul className="mt-6 flex flex-col gap-8">
-        {experience.map((item) => (
-          <li key={`${item.company}-${item.period}`}>
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="font-medium">
-                {item.role} · {item.company}, {item.location}
-              </h3>
-              <span className="text-sm text-zinc-500">
-                {item.period}
-              </span>
-            </div>
-            <p className="mt-1 max-w-2xl text-zinc-600">
-              {item.description}
-            </p>
+      <div className="flex items-baseline justify-between">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+          Experience
+        </h2>
+        <span className="text-xs uppercase tracking-wide text-zinc-400">
+          Click to expand
+        </span>
+      </div>
+      <ul className="mt-4 flex flex-col">
+        {experience.map((item, index) => {
+          const isOpen = openIndex === index;
+          return (
+            <li key={`${item.company}-${item.period}`} className="border-b border-black/[.08]">
+              <button
+                type="button"
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+                aria-expanded={isOpen}
+                className="flex w-full flex-wrap items-baseline justify-between gap-2 py-5 text-left"
+              >
+                <h3 className="font-medium">
+                  {item.role} · {item.company}, {item.location}
+                </h3>
+                <span className="flex items-center gap-3 text-sm text-zinc-500">
+                  {item.period}
+                  <span className="text-zinc-400">{isOpen ? "–" : "+"}</span>
+                </span>
+              </button>
 
-            {item.projects && (
-              <ul className="mt-4 flex flex-col gap-3 border-l border-black/[.08] pl-4">
-                {item.projects.map((project) => (
-                  <li key={project.name}>
-                    <h4 className="text-sm font-medium">{project.name}</h4>
-                    <p className="mt-0.5 text-sm text-zinc-600">
-                      {project.description}
-                    </p>
-                    <ul className="mt-2 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className="rounded-full bg-black/[.05] px-2.5 py-1 text-xs text-zinc-600"
-                        >
-                          {tag}
+              {isOpen && (
+                <div className="pb-6">
+                  <p className="max-w-2xl text-zinc-600">{item.description}</p>
+
+                  {item.projects && (
+                    <ul className="mt-4 flex flex-col gap-3 border-l border-black/[.08] pl-4">
+                      {item.projects.map((project) => (
+                        <li key={project.name}>
+                          <h4 className="text-sm font-medium">{project.name}</h4>
+                          <p className="mt-0.5 text-sm text-zinc-600">
+                            {project.description}
+                          </p>
+                          <ul className="mt-2 flex flex-wrap gap-2">
+                            {project.tags.map((tag) => (
+                              <li
+                                key={tag}
+                                className="rounded-full bg-black/[.05] px-2.5 py-1 text-xs text-zinc-600"
+                              >
+                                {tag}
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                       ))}
                     </ul>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
+                  )}
+                </div>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
