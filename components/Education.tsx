@@ -1,19 +1,19 @@
-type EducationItem = {
-  school: string;
-  degree: string;
-  period: string;
-};
+import TimelineList, { TimelineItem } from "./TimelineList";
 
-const education: EducationItem[] = [
+const education: TimelineItem[] = [
   {
-    school: "Nanyang Technological University (NTU)",
-    degree: "Master's, Business Analytics",
-    period: "Jul 2021 — Jan 2023",
+    title: "Nanyang Technological University (NTU)",
+    subtitle: "Singapore",
+    label: "Master's, Business Analytics",
+    period: "2021 — 2023",
+    logo: "/ntu-logo.png",
   },
   {
-    school: "Jilin University",
-    degree: "Bachelor's, Finance",
-    period: "Sep 2013 — Jul 2017",
+    title: "Jilin University",
+    subtitle: "China",
+    label: "Bachelor's, Finance",
+    period: "2013 — 2017",
+    logo: "/jlu-logo.png",
   },
 ];
 
@@ -23,17 +23,7 @@ export default function Education() {
       <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
         Education
       </h2>
-      <ul className="mt-6 flex flex-col gap-4">
-        {education.map((item) => (
-          <li key={item.school} className="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 className="font-medium">{item.school}</h3>
-              <p className="text-sm text-zinc-600">{item.degree}</p>
-            </div>
-            <span className="text-sm text-zinc-500">{item.period}</span>
-          </li>
-        ))}
-      </ul>
+      <TimelineList items={education} />
     </section>
   );
 }

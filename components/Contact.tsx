@@ -9,9 +9,6 @@ export default function Contact() {
       <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
         Contact
       </h2>
-      <p className="mt-4 max-w-xl text-zinc-700">
-        Feel free to reach out if you&apos;d like to work together or just say hi.
-      </p>
       <ul className="mt-4 flex flex-wrap gap-4">
         {links.map((link) => (
           <li key={link.label}>
