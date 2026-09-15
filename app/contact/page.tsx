@@ -16,7 +16,7 @@ const links = [
   {
     label: "Email",
     value: "zhangyue325 [at] gmail [dot] com",
-    href: "/#"
+    href: ""
   },
   {
     label: "LinkedIn",

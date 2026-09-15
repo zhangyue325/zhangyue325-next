@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -7,40 +8,51 @@ export const metadata: Metadata = {
 };
 
 type Project = {
+  slug: string;
   name: string;
-  description: string;
-  href?: string;
+  summary: string;
   tags: string[];
 };
 
 const projects: Project[] = [
   {
+    slug: "ai-product-image-generator",
     name: "AI Product Image Generator",
-    description:
+    summary:
       "A tool that generates on-brand product imagery for retail sellers using AI, cutting down the need for traditional photoshoots. (placeholder — refine with real details)",
     tags: ["AI", "Image Generation"],
   },
   {
+    slug: "shopify-merchant-chatbot",
     name: "Shopify Merchant Chatbot",
-    description:
+    summary:
       "A chatbot that helps Shopify merchants automatically answer common customer questions and handle store queries. (placeholder — refine with real details)",
     tags: ["Chatbot", "Shopify API", "LLM"],
   },
   {
+    slug: "singapore-promotions-aggregator",
     name: "Singapore Promotions Aggregator",
-    description:
+    summary:
       "A website that uses AI to collect and summarize ongoing promotions across Singapore onto a single page. (placeholder — refine with real details)",
     tags: ["AI", "Web Scraping", "Next.js"],
+  },
+  {
+    slug: "eda-and-baseline-models-in-kaggle",
+    name: "EDA & Baseline Models (Kaggle)",
+    summary:
+      "Exploratory data analysis and baseline models for Kaggle's Predict Student Performance from Game Play competition — earned a Silver Notebook Medal.",
+    tags: ["Kaggle", "EDA", "Machine Learning"],
   },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
-  const cardClassName =
-    "group rounded-xl border border-black/[.08] p-5 transition-colors hover:bg-black/[.03]";
-  const content = (
-    <>
+  return (
+    <Link
+      href={`/projects/${project.slug}`}
+      className="group rounded-xl border border-black/[.08] p-5 transition-colors hover:bg-black/[.03]"
+    >
       <h3 className="font-medium group-hover:underline">{project.name}</h3>
-      <p className="mt-2 text-sm text-zinc-600">{project.description}</p>
+      <p className="mt-2 text-sm text-zinc-600">{project.summary}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <li
@@ -51,20 +63,7 @@ function ProjectCard({ project }: { project: Project }) {
           </li>
         ))}
       </ul>
-    </>
-  );
-
-  return project.href ? (
-    <a
-      href={project.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cardClassName}
-    >
-      {content}
-    </a>
-  ) : (
-    <div className={cardClassName}>{content}</div>
+    </Link>
   );
 }
 
@@ -78,11 +77,11 @@ export default function ProjectPage() {
             Projects
           </h1>
           <p className="mt-6 max-w-xl text-lg text-zinc-500">
-            A few things I&apos;ve built outside of work.
+            A few things I&apos;ve built inside or outside of work.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+              <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>

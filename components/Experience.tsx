@@ -6,7 +6,7 @@ const experience: TimelineItem[] = [
     subtitle: "Singapore",
     label: "Data Analyst",
     period: "2023 — Present",
-    logo: "/pazzion-logo.webp",
+    logo: "/logo/pazzion-logo.webp",
     description:
       "Built the company's single source of truth on GCP (BigQuery) and a standardized campaign dashboard across 5 markets, cutting reporting turnaround by 2 days. Partnered with marketing to raise paid-ads ROAS from 4.4x to 11.6x and ran A/B tests that lifted conversion rate by 10.5%.",
     projects: [
@@ -35,7 +35,7 @@ const experience: TimelineItem[] = [
     subtitle: "Singapore",
     label: "Data Analyst, Intern",
     period: "2022",
-    logo: "/shopee-logo.png",
+    logo: "/logo/shopee-logo.png",
     description:
       "Built brand-mismatch detection rules across 150M+ products in Python and answered cross-team reporting questions in Spark SQL. Diagnostic analysis on inspection workflows saved 80+ agents 2 hours daily, backed by a daily dashboard.",
   },
@@ -44,7 +44,7 @@ const experience: TimelineItem[] = [
     subtitle: "Singapore",
     label: "Data Engineer, Intern",
     period: "2022",
-    logo: "/pureland-logo.jpeg",
+    logo: "/logo/pureland-logo.jpeg",
     description:
       "Built and optimized ETL pipelines ingesting stocks and futures market data from multiple sources for trading-strategy backtesting, introducing parallel processing to cut runtimes and improve reliability.",
   },
@@ -53,7 +53,7 @@ const experience: TimelineItem[] = [
     subtitle: "China",
     label: "Business Analyst",
     period: "2017 — 2021",
-    logo: "/ccoop-logo.png",
+    logo: "/logo/ccoop-logo.png",
     description:
       "Led competitive intelligence and market research shaping growth strategy for retail and e-commerce subsidiaries. Distilled due diligence into executive-ready briefs supporting 4 go/no-go investment decisions.",
   },

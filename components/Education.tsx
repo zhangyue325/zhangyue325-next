@@ -6,14 +6,14 @@ const education: TimelineItem[] = [
     subtitle: "Singapore",
     label: "Master's, Business Analytics",
     period: "2021 — 2023",
-    logo: "/ntu-logo.png",
+    logo: "/logo/ntu-logo.png",
   },
   {
     title: "Jilin University",
     subtitle: "China",
     label: "Bachelor's, Finance",
     period: "2013 — 2017",
-    logo: "/jlu-logo.png",
+    logo: "/logo/jlu-logo.png",
   },
 ];
 

@@ -14,7 +14,7 @@ export default function Hero() {
         — About
       </p>
       <h1 className="text-6xl font-medium tracking-tight sm:text-7xl">
-        Evan Yue Zhang
+        Ev
       </h1>
       <p className="max-w-xl text-lg text-zinc-900">
         Data Analyst based in Singapore.
