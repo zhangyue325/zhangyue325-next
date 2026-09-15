@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const facts = [
   { label: "Currently", value: "Data Analyst · Pazzion" },
-  { label: "Experience", value: "8+ years, 3+ in data analytics" },
-  { label: "Focus", value: "Data pipelines · Experimentation · GenAI tooling" },
+  { label: "Experience", value: "3+ in data analytics" },
+  { label: "Focus", value: "Data Analysis · Applied AI · Solutions from 0 to 1" },
   { label: "Location", value: "Singapore" },
 ];
 
@@ -22,18 +24,18 @@ export default function Hero() {
         that turn business questions into decisions.
       </p>
       <div className="mt-2 flex gap-3">
-        <a
-          href="#projects"
+        <Link
+          href="/projects"
           className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-colors hover:bg-[#383838]"
         >
           View Projects
-        </a>
-        <a
-          href="#contact"
+        </Link>
+        <Link
+          href="/contact"
           className="rounded-full border border-black/[.08] px-5 py-2.5 text-sm font-medium transition-colors hover:bg-black/[.04]"
         >
           Contact Me
-        </a>
+        </Link>
       </div>
 
       <dl className="mt-8 grid w-full grid-cols-2 gap-x-6 gap-y-5 border-t border-black/[.08] pt-6 sm:grid-cols-4">

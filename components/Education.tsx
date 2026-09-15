@@ -2,7 +2,7 @@ import TimelineList, { TimelineItem } from "./TimelineList";
 
 const education: TimelineItem[] = [
   {
-    title: "Nanyang Technological University (NTU)",
+    title: "Nanyang Technological University",
     subtitle: "Singapore",
     label: "Master's, Business Analytics",
     period: "2021 — 2023",
