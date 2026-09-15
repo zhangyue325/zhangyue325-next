@@ -1,11 +1,5 @@
 import Link from "next/link";
 
-const facts = [
-  { label: "Currently", value: "Data Analyst · Pazzion" },
-  { label: "Experience", value: "3+ in data analytics" },
-  { label: "Focus", value: "Data Analysis · Applied AI · Solutions from 0 to 1" },
-  { label: "Location", value: "Singapore" },
-];
 
 export default function Hero() {
   return (
@@ -13,8 +7,8 @@ export default function Hero() {
       <p className="text-xs font-medium uppercase tracking-widest text-zinc-400">
         — About
       </p>
-      <h1 className="text-6xl font-medium tracking-tight sm:text-7xl">
-        Ev
+      <h1 className="text-3xl tracking-tight sm:text-3xl">
+        Evan Yue Zhang
       </h1>
       <p className="max-w-xl text-lg text-zinc-900">
         Data Analyst based in Singapore.
@@ -38,16 +32,6 @@ export default function Hero() {
         </Link>
       </div>
 
-      <dl className="mt-8 grid w-full grid-cols-2 gap-x-6 gap-y-5 border-t border-black/[.08] pt-6 sm:grid-cols-4">
-        {facts.map((fact) => (
-          <div key={fact.label}>
-            <dt className="text-xs uppercase tracking-wide text-zinc-400">
-              {fact.label}
-            </dt>
-            <dd className="mt-1 text-sm text-zinc-700">{fact.value}</dd>
-          </div>
-        ))}
-      </dl>
     </section>
   );
 }

@@ -100,13 +100,15 @@ export default function Page() {
   return (
     <ProjectPageShell
       name="EDA & Baseline XGBoost Model (Kaggle)"
+      role="Solo Contributor"
+      year="2023"
       tags={["Kaggle", "EDA", "Machine Learning", "XGBoost"]}
     >
       <h2 className="mt-8 text-2xl font-medium tracking-wide">
         Overview
       </h2>
       <p className="mt-3">
-        EDA and XGBoost baseline models for Kaggle&apos;s{" "}
+        Exploratory data analysis and XGBoost baseline model for Kaggle&apos;s{" "}
         <a
           href="https://www.kaggle.com/competitions/predict-student-performance-from-game-play"
           target="_blank"
@@ -120,7 +122,7 @@ export default function Page() {
       </p>
 
       <h2 className="mt-8 text-2xl font-medium tracking-wide">
-        EDA
+        Exploratory Data Analysis
       </h2>
       <div className="mt-3">
         <ImageCarousel slides={eda_gallery} />

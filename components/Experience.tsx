@@ -70,7 +70,7 @@ export default function Experience() {
           Click to expand
         </span>
       </div>
-      <TimelineList items={experience} defaultOpenIndex={0} />
+      <TimelineList items={experience} />
     </section>
   );
 }

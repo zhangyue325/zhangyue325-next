@@ -14,6 +14,7 @@ type Slide = {
 export default function ImageCarousel({ slides }: { slides: Slide[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -31,14 +32,32 @@ export default function ImageCarousel({ slides }: { slides: Slide[] }) {
     };
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLightboxOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [lightboxOpen]);
+
+  const activeSlide = slides[selectedIndex];
+
   return (
     <div>
       <div className="relative overflow-hidden rounded-xl border border-black/[.08]" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide) => (
-            <div
+            <button
               key={slide.src}
-              className="relative h-64 min-w-0 shrink-0 grow-0 basis-full sm:h-80"
+              type="button"
+              aria-label={`View larger image: ${slide.caption}`}
+              onClick={() => setLightboxOpen(true)}
+              className="relative h-64 min-w-0 shrink-0 grow-0 basis-full cursor-zoom-in sm:h-80"
             >
               <Image
                 src={slide.src}
@@ -47,7 +66,7 @@ export default function ImageCarousel({ slides }: { slides: Slide[] }) {
                 sizes="(min-width: 640px) 672px, 100vw"
                 className="object-contain"
               />
-            </div>
+            </button>
           ))}
         </div>
 
@@ -85,6 +104,38 @@ export default function ImageCarousel({ slides }: { slides: Slide[] }) {
           ))}
         </div>
       </div>
+
+      {lightboxOpen && activeSlide && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeSlide.caption}
+          onClick={() => setLightboxOpen(false)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6 cursor-zoom-out"
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setLightboxOpen(false)}
+            className="absolute right-4 top-4 flex size-9 items-center justify-center rounded-full bg-white/10 text-lg text-white transition-colors hover:bg-white/20"
+          >
+            &times;
+          </button>
+
+          <div
+            onClick={(event) => event.stopPropagation()}
+            className="relative h-[85vh] w-[92vw] max-w-5xl cursor-default"
+          >
+            <Image
+              src={activeSlide.src}
+              alt={activeSlide.caption}
+              fill
+              sizes="92vw"
+              className="object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

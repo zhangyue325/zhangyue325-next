@@ -16,6 +16,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    slug: "ai-adoption-and-transformation",
+    name: "AI Adoption and Transformation",
+    summary:
+      "",
+    tags: ["AI"]
+  },
+  {
     slug: "ai-product-image-generator",
     name: "AI Product Image Generator",
     summary:
@@ -26,8 +33,8 @@ const projects: Project[] = [
     slug: "shopify-merchant-chatbot",
     name: "Shopify Merchant Chatbot",
     summary:
-      "A chatbot that helps Shopify merchants automatically answer common customer questions and handle store queries. (placeholder — refine with real details)",
-    tags: ["Chatbot", "Shopify API", "LLM"],
+      "An AI shopping assistant for Shopify storefronts, built on Claude and Shopify's Storefront MCP, with a merchant-friendly admin dashboard.",
+    tags: ["Shopify", "Claude", "MCP", "React Router"],
   },
   {
     slug: "singapore-promotions-aggregator",
@@ -73,7 +80,7 @@ export default function ProjectPage() {
       <Header />
       <main className="mx-auto w-full max-w-3xl flex-1 px-6">
         <section className="py-16 sm:py-24">
-          <h1 className="text-6xl font-medium tracking-tight sm:text-7xl">
+          <h1 className="text-3xl tracking-tight sm:text-3xl">
             Projects
           </h1>
           <p className="mt-6 max-w-xl text-lg text-zinc-500">

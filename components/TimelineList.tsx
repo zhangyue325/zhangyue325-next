@@ -40,7 +40,7 @@ export default function TimelineList({ items, defaultOpenIndex = null }: Timelin
               onClick={() => isExpandable && setOpenIndex(isOpen ? null : index)}
               aria-expanded={isExpandable ? isOpen : undefined}
               className={`flex w-full flex-wrap items-center gap-4 py-5 text-left ${
-                isExpandable ? "" : "cursor-default"
+                isExpandable ? "cursor-pointer" : "cursor-default"
               }`}
             >
               <span className="w-full shrink-0 text-sm text-zinc-500 sm:w-32">

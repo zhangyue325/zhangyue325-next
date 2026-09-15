@@ -40,7 +40,7 @@ export default function ContactPage() {
         <section className="py-16 sm:py-24">
           <div className="grid gap-10 sm:grid-cols-2 sm:gap-16">
             <div>
-              <h2 className="text-6xl font-medium tracking-tight sm:text-7xl">
+              <h2 className="text-3xl tracking-tight sm:text-3xl">
                 Let&apos;s Talk
               </h2>
               <p className="mt-6 max-w-md text-xl leading-snug text-zinc-900 sm:text-2xl">
