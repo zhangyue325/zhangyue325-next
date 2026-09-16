@@ -7,29 +7,34 @@ const experience: TimelineItem[] = [
     label: "Data Analyst",
     period: "2023 — Present",
     logo: "/logo/pazzion-logo.webp",
-    description:
-      "Built the company's single source of truth on GCP (BigQuery) and a standardized campaign dashboard across 5 markets, cutting reporting turnaround by 2 days. Partnered with marketing to raise paid-ads ROAS from 4.4x to 11.6x and ran A/B tests that lifted conversion rate by 10.5%.",
     projects: [
       {
         name: "AI Transformation and Adoption Initiative",
         description:
-          "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 20+ employees.",
-        tags: ["GCP", "AI Strategy", "Change Management"],
+          "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 100 + employees.",
+        tags: ["AI", "Data Architecture", "Data Pipelines", "For 0 to 1"],
         slug: "ai-adoption-and-transformation",
       },
       {
-        name: "Cross-Market Campaign Analytics",
+        name: "Website Traffic and Conversion Analysis Framework",
         description:
-          "Designed a standardized analysis framework and dashboard for e-commerce campaigns across 5 markets, cutting reporting turnaround time by 2 days.",
-        tags: ["BigQuery", "SQL", "Dashboarding"],
-        slug: "cross-market-campaign-analytics",
+          "Built a standardized attribution methodology and a centralized dashboard to compare website traffic, conversions, and channel performance.",
+        tags: ["Marketing Analytics", "Traffic Attribution", "Data Visualization"],
+        slug: "website-traffic-and-conversion-analysis-framework",
       },
       {
         name: "Paid Ads Budget Optimization",
         description:
-          "Built experimentation and decision models for paid-ads budget allocation, raising ROAS from 4.4x to 11.6x, and ran controlled A/B tests that lifted conversion rate by 10.5%.",
+          "Trained marketing mix models to estimate the incremental return of paid ads spend and recommended budget allocation across channels.",
         tags: ["A/B Testing", "Causal Inference", "Python"],
         slug: "paid-ads-budget-optimization",
+      },
+      {
+        name: "Website Conversion Optimization via A/B Testing",
+        description:
+          "Introduced A/B testing methodology to evaluate website design and feature changes, Established a structured, evidence-based decision-making process for website optimization.",
+        tags: ["A/B Testing", "Statistical Analysis", "HTML/CSS/JS"],
+        slug: "website-conversion-optimization",
       },
     ],
   },
@@ -39,18 +44,20 @@ const experience: TimelineItem[] = [
     label: "Data Analyst, Intern",
     period: "2022",
     logo: "/logo/shopee-logo.png",
-    description:
-      "test",
     projects: [
       {
-        name: "AI Transformation and Adoption Initiative",
+        name: "Data Queries for Cross-Functional Teams",
         description:
-          "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 20+ employees.",
-        tags: ["GCP", "AI Strategy", "Change Management"],
+          "Translated multiple teams' ambiguous requests into well-scoped data questions and answered them in Spark SQL to support their reporting and business decisions.",
+        tags: ["SQL", "Python", "Data Analysis"],
+      },
+      {
+        name: "Find and Fix Brand Mismatches in Product Listings",
+        description:
+          "Built rules to identify potential brand mismatches across 150+ million products using Python, streamlining the listing team's data cleanup process.",
+        tags: ["SQL", "Python", "Abnormality Detection", "Data Cleaning"],
       }
     ],
-
-      
   },
   {
     title: "Pureland",
@@ -59,7 +66,7 @@ const experience: TimelineItem[] = [
     period: "2022",
     logo: "/logo/pureland-logo.jpeg",
     description:
-      "Built and optimized ETL pipelines ingesting stocks and futures market data from multiple sources for trading-strategy backtesting.",
+      "Built and optimized data pipelines ingesting stocks and futures market data from multiple sources for trading-strategy backtesting.",
   },
   {
     title: "CCOOP",
@@ -68,7 +75,7 @@ const experience: TimelineItem[] = [
     period: "2017 — 2021",
     logo: "/logo/ccoop-logo.png",
     description:
-      "Led competitive intelligence and market research shaping growth strategy for retail and e-commerce subsidiaries.",
+      "Conducted research shaping growth strategy for retail and e-commerce subsidiaries.",
   },
 ];
 

@@ -34,7 +34,7 @@ export default function Page() {
       name="AI Adoption & Transformation (PAZZION)"
       role="Initiator"
       year="2026"
-      tags={["AI", "Data Architecture", "Data Engineering", "Change Management"]}
+      tags={["AI", "Data Architecture", "Data Pipelines", "For 0 to 1"]}
     >
       <h2 className="mt-8 text-2xl font-medium tracking-wide">Overview</h2>
       <p className="mt-3">
@@ -114,9 +114,9 @@ export default function Page() {
           Explored ready-to-use plugins and skills for standard workflows to
           speed up adoption, rather than building everything from scratch:
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>Paid ads — campaign copy drafting and performance summaries.</li>
-            <li>SEO — keyword research and content brief generation.</li>
-            <li>Image generation — product image generation and editing.</li>
+            <li>Paid ads: audit existing campaigns, design a/b test, generate report. </li>
+            <li>SEO: audit technicial SEO and GEO, content optimisation, compare competitors. </li>
+            <li>Image generation: geneate iamges and video for paid ads and social media.</li>
           </ul>
         </li>
       </ul>
@@ -125,9 +125,9 @@ export default function Page() {
         Impact
       </h2>
       <ul className="mt-3 list-disc space-y-2 pl-5">
-        <li>Paid ads: saved about 10 hours per week on manual copy drafting.</li>
+        <li>Paid ads: saved about 10 hours per week on daily performance monitoring and reporting.</li>
         <li>
-          SEO: replaced the outsourced SEO agency with AI, saving $4,500 per
+          SEO: replaced the outsourced SEO agency with AI agnt, saving $4,500 per
           month.
         </li>
       </ul>
@@ -137,7 +137,7 @@ export default function Page() {
       </h2>
       <ul className="mt-3 list-disc space-y-2 pl-5">
         <li>Expand pipeline coverage to remaining source systems</li>
-        <li>Develop skills for internal users</li>
+        <li>Develop our own skills for internal users</li>
       </ul>
     </ProjectPageShell>
   );

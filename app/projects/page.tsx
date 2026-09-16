@@ -19,8 +19,8 @@ const projects: Project[] = [
     slug: "ai-adoption-and-transformation",
     name: "AI Adoption and Transformation",
     summary:
-      "",
-    tags: ["AI"]
+      "Led AI adoption and transformation efforts at PAZZION, spanning both the technical foundation and the human side of change: helping the team adapt how they work with AI.",
+    tags: ["AI", "Data Architecture", "Data Engineering", "For 0 to 1"]
   },
   {
     slug: "ai-product-image-generator",
@@ -37,18 +37,25 @@ const projects: Project[] = [
     tags: ["Shopify", "Claude", "MCP", "React Router"],
   },
   {
-    slug: "singapore-promotions-aggregator",
-    name: "Singapore Promotions Aggregator",
-    summary:
-      "A website that uses AI to collect and summarize ongoing promotions across Singapore onto a single page. (placeholder — refine with real details)",
-    tags: ["AI", "Web Scraping", "Next.js"],
-  },
-  {
     slug: "eda-and-baseline-models-in-kaggle",
     name: "EDA & Baseline Models (Kaggle)",
     summary:
       "Exploratory data analysis and baseline models for Kaggle's Predict Student Performance from Game Play competition — earned a Silver Notebook Medal.",
     tags: ["Kaggle", "EDA", "Machine Learning"],
+  },
+  {
+    slug: "dashboard-with-streamlit",
+    name: "Dashboard with Streamlit",
+    summary:
+      "A simple dashboard built with Streamlit to visualize data and insights.",
+    tags: ["Streamlit", "Data Visualization"],
+  },
+  {
+    slug: "analysis-framework-for-paid-ads",
+    name: "Analysis Framework",
+    summary:
+      "A simple dashboard built with Streamlit to visualize data and insights.",
+    tags: ["Streamlit", "Data Visualization"],
   },
 ];
 

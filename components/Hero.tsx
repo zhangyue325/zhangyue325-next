@@ -14,8 +14,9 @@ export default function Hero() {
         Data Analyst based in Singapore.
       </p>
       <p className="max-w-xl text-lg text-zinc-500">
-        I build data pipelines, dashboards, and experimentation frameworks
-        that turn business questions into decisions.
+        I build data and AI solutions from 0 to 1 — pipelines, dashboards, and
+        experimentation frameworks that turn business questions into
+        decisions.
       </p>
       <div className="mt-2 flex gap-3">
         <Link

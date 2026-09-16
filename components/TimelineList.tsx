@@ -33,7 +33,7 @@ export default function TimelineList({ items, defaultOpenIndex = null }: Timelin
     <ul className="mt-4 flex flex-col">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
-        const isExpandable = Boolean(item.description);
+        const isExpandable = Boolean(item.description) || Boolean(item.projects?.length);
 
         return (
           <li key={`${item.title}-${item.period}`} className="border-b border-black/[.08]">
@@ -76,7 +76,9 @@ export default function TimelineList({ items, defaultOpenIndex = null }: Timelin
 
             {isExpandable && isOpen && (
               <div className="pb-6">
-                <p className="max-w-2xl text-zinc-600">{item.description}</p>
+                {item.description && (
+                  <p className="max-w-2xl text-zinc-600">{item.description}</p>
+                )}
 
                 {item.projects && (
                   <ul className="mt-4 flex flex-col gap-3 border-l border-black/[.08] pl-4">
