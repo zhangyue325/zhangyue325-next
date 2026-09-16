@@ -11,7 +11,7 @@ const experience: TimelineItem[] = [
       {
         name: "AI Transformation and Adoption Initiative",
         description:
-          "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 100 + employees.",
+          "Made AI has the access to our internal data and systems, and ran hands-on adoption sessions for 100 + employees.",
         tags: ["AI", "Data Architecture", "Data Pipelines", "For 0 to 1"],
         slug: "ai-adoption-and-transformation",
       },
