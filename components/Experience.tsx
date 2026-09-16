@@ -36,6 +36,12 @@ const experience: TimelineItem[] = [
         tags: ["A/B Testing", "Statistical Analysis", "HTML/CSS/JS"],
         slug: "website-conversion-optimization",
       },
+      {
+        name: "AI Image Generation Manager",
+        description:
+          "Built an AI agent that combines brand guidelines with reusable prompt templates to streamline the generation of consistent, on-brand marketing visuals.",
+        tags: ["Gen AI", "AI Agent", "Next.js"],
+      },
     ],
   },
   {
