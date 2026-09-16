@@ -11,22 +11,25 @@ const experience: TimelineItem[] = [
       "Built the company's single source of truth on GCP (BigQuery) and a standardized campaign dashboard across 5 markets, cutting reporting turnaround by 2 days. Partnered with marketing to raise paid-ads ROAS from 4.4x to 11.6x and ran A/B tests that lifted conversion rate by 10.5%.",
     projects: [
       {
-        name: "AI Transformation Initiative",
+        name: "AI Transformation and Adoption Initiative",
         description:
           "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 20+ employees.",
         tags: ["GCP", "AI Strategy", "Change Management"],
+        slug: "ai-adoption-and-transformation",
       },
       {
         name: "Cross-Market Campaign Analytics",
         description:
           "Designed a standardized analysis framework and dashboard for e-commerce campaigns across 5 markets, cutting reporting turnaround time by 2 days.",
         tags: ["BigQuery", "SQL", "Dashboarding"],
+        slug: "cross-market-campaign-analytics",
       },
       {
         name: "Paid Ads Budget Optimization",
         description:
           "Built experimentation and decision models for paid-ads budget allocation, raising ROAS from 4.4x to 11.6x, and ran controlled A/B tests that lifted conversion rate by 10.5%.",
         tags: ["A/B Testing", "Causal Inference", "Python"],
+        slug: "paid-ads-budget-optimization",
       },
     ],
   },
@@ -37,7 +40,17 @@ const experience: TimelineItem[] = [
     period: "2022",
     logo: "/logo/shopee-logo.png",
     description:
-      "Built brand-mismatch detection rules across 150M+ products in Python and answered cross-team reporting questions in Spark SQL. Diagnostic analysis on inspection workflows saved 80+ agents 2 hours daily, backed by a daily dashboard.",
+      "test",
+    projects: [
+      {
+        name: "AI Transformation and Adoption Initiative",
+        description:
+          "Led a cross-functional program across 6 teams to establish the data and integration foundation for enterprise AI use cases, and ran hands-on adoption sessions for 20+ employees.",
+        tags: ["GCP", "AI Strategy", "Change Management"],
+      }
+    ],
+
+      
   },
   {
     title: "Pureland",
@@ -46,7 +59,7 @@ const experience: TimelineItem[] = [
     period: "2022",
     logo: "/logo/pureland-logo.jpeg",
     description:
-      "Built and optimized ETL pipelines ingesting stocks and futures market data from multiple sources for trading-strategy backtesting, introducing parallel processing to cut runtimes and improve reliability.",
+      "Built and optimized ETL pipelines ingesting stocks and futures market data from multiple sources for trading-strategy backtesting.",
   },
   {
     title: "CCOOP",
@@ -55,7 +68,7 @@ const experience: TimelineItem[] = [
     period: "2017 — 2021",
     logo: "/logo/ccoop-logo.png",
     description:
-      "Led competitive intelligence and market research shaping growth strategy for retail and e-commerce subsidiaries. Distilled due diligence into executive-ready briefs supporting 4 go/no-go investment decisions.",
+      "Led competitive intelligence and market research shaping growth strategy for retail and e-commerce subsidiaries.",
   },
 ];
 

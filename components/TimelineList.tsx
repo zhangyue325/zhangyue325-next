@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export type TimelineProject = {
   name: string;
   description: string;
   tags: string[];
+  slug?: string;
 };
 
 export type TimelineItem = {
@@ -80,7 +82,16 @@ export default function TimelineList({ items, defaultOpenIndex = null }: Timelin
                   <ul className="mt-4 flex flex-col gap-3 border-l border-black/[.08] pl-4">
                     {item.projects.map((project) => (
                       <li key={project.name}>
-                        <h4 className="text-sm font-medium">{project.name}</h4>
+                        {project.slug ? (
+                          <Link
+                            href={`/projects/${project.slug}`}
+                            className="text-sm font-medium hover:underline"
+                          >
+                            {project.name}
+                          </Link>
+                        ) : (
+                          <h4 className="text-sm font-medium">{project.name}</h4>
+                        )}
                         <p className="mt-0.5 text-sm text-zinc-600">
                           {project.description}
                         </p>
